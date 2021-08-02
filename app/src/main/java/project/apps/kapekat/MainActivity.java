@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
     @Click(R.id.btnLoginLanding)
     public void btnLoginLanding()
     {
-        Login_.intent(this).start();Register_.intent(this).start();
+        Login_.intent(this).start();
     }
 
     @Click(R.id.btnRegisterLanding)
     public void btnRegisterLanding()
     {
-        Register_.intent(this).start();Register_.intent(this).start();
+        Register_.intent(this).start();
     }
 
 

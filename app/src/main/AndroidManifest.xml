@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KapeKat">
-        <activity android:name=".MainMenu_"></activity>
+        <activity
+            android:name=".Admin_"
+            android:exported="true" />
+        <activity android:name=".MainMenu_" />
         <activity android:name=".Login_" />
         <activity android:name=".Register_" />
         <activity android:name=".MainActivity_">

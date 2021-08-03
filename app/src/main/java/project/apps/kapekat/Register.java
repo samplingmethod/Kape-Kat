@@ -15,13 +15,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 import org.bson.types.Code;
-
 import io.realm.Realm;
+
+import java.util.UUID;
 
 @EActivity(R.layout.activity_register)
 public class Register extends AppCompatActivity {
@@ -44,12 +47,13 @@ public class Register extends AppCompatActivity {
     @ViewById(R.id.tvAlreadyLogin)
     TextView Login;
 
-    //Realm realm;
+    Realm realm;
 
     @AfterViews
     public void init()
     {
-        //realm = Realm.getDefaultInstance();
+        Realm.init(getApplicationContext());
+        realm = Realm.getDefaultInstance();
         String txt = "Already have an account? Login";
         SpannableString ss2 = new SpannableString(txt);
         ClickableSpan AlreadyLogin = new ClickableSpan() {
@@ -75,7 +79,54 @@ public class Register extends AppCompatActivity {
 
 
     }
+    @Click
+    public void btnRegister(){
+        User result = realm.where(User.class).equalTo("username",regUsername.getText().toString()).findFirst();
 
+        String pwd1 = regPW.getText().toString();
+        String pwd2 = regConfirmPW.getText().toString();
 
+        if (regUsername.getText().toString().isEmpty()){
+            Toast toast = Toast.makeText(Register.this, "Name must not be blank", Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else if (regPW.getText().toString().isEmpty()){
+            Toast toast = Toast.makeText(Register.this, "Password must not be blank", Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else if (result != null){
+            Toast toast = Toast.makeText(Register.this, "User already exists", Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else if ((!regUsername.getText().toString().isEmpty()) && (pwd1.equals(pwd2)) && (!pwd1.isEmpty())){
+            User newUser =  new User();
+            newUser.setUuid(UUID.randomUUID().toString());
+            newUser.setUsername(regUsername.getText().toString());
+            newUser.setPassword(pwd1);
 
+            long count = 0;
+            try {
+                realm.beginTransaction();
+                realm.copyToRealmOrUpdate(newUser);  // save
+                realm.commitTransaction();
+
+                count = realm.where(User.class).count();
+
+                Toast t = Toast.makeText(this, "New User saved. Total: "+count, Toast.LENGTH_LONG);
+                t.show();
+
+                Login_.intent(this).start();
+            }
+
+            catch(Exception e)
+            {
+                Toast t = Toast.makeText(this, "Error saving", Toast.LENGTH_LONG);
+                t.show();
+            }
+        }
+        else{
+            Toast toast = Toast.makeText(Register.this, "Confirm password does not match", Toast.LENGTH_LONG);
+            toast.show();
+        }
+    }
 }

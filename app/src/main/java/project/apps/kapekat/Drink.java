@@ -11,14 +11,16 @@ public class Drink extends RealmObject {
     private String uuid;
     private String drink;
     private String price;
+    private String img_url;
 
     public Drink() {
     }
 
-    public Drink(String uuid, Image picture, String drink, String price) {
+    public Drink(String uuid, String drink, String price, String img_url) {
         this.uuid = uuid;
         this.drink = drink;
         this.price = price;
+        this.img_url = img_url;
     }
 
     public String getUuid() {
@@ -45,12 +47,21 @@ public class Drink extends RealmObject {
         this.price = price;
     }
 
+    public String getImg_url() {
+        return img_url;
+    }
+
+    public void setImg_url(String img_url) {
+        this.img_url = img_url;
+    }
+
     @Override
     public String toString() {
         return "Drink{" +
                 "uuid='" + uuid + '\'' +
                 ", drink='" + drink + '\'' +
                 ", price='" + price + '\'' +
+                ", img_url='" + img_url + '\'' +
                 '}';
     }
 }

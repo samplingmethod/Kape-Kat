@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity
             @Override
             public void updateDrawState(@NonNull TextPaint ds) {
                 super.updateDrawState(ds);
-                ds.setColor(Color.parseColor("#009688"));
+                ds.setColor(Color.parseColor("#A26A4C"));
                 ds.setUnderlineText(false);
 
             }
@@ -104,7 +104,8 @@ public class Login extends AppCompatActivity
                     edit.putBoolean("rememberme", true);
                     edit.putString("uuid", check_uuid);
                     edit.apply();
-                } else {
+                }
+                else {
                     SharedPreferences.Editor edit = preferences.edit();
                     edit.putBoolean("rememberme", false);
                     edit.putString("uuid", check_uuid);

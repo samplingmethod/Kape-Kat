@@ -2,17 +2,151 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ivKapeKatMainMenuLogo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenu">
 
+    <ImageView
+        android:id="@+id/ivLogoMainMenu"
+        android:layout_width="138dp"
+        android:layout_height="143dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.005"
+        app:srcCompat="@drawable/kapekat_without" />
+
+    <Button
+        android:id="@+id/btnRate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/rate_button"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <Button
+        android:id="@+id/btnUserManagement"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/iconmain"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toEndOf="@+id/ivLogoMainMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
     <TextView
-        android:id="@+id/mainmenu"
+        android:id="@+id/tvWelcomeBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the main menu"
+        android:text="Welcome back, @user!"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <TextView
+        android:id="@+id/tvWhat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What would you like to order today?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeBack"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnLilyLatteMain"
+        android:layout_width="140dp"
+        android:layout_height="156dp"
+        android:background="@drawable/latte"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <Button
+        android:id="@+id/btnMeowtchaMain"
+        android:layout_width="140dp"
+        android:layout_height="156dp"
+        android:background="@drawable/matcha"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <Button
+        android:id="@+id/btnChaiMain"
+        android:layout_width="140dp"
+        android:layout_height="156dp"
+        android:background="@drawable/chai"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
+
+    <Button
+        android:id="@+id/btnMochatMain"
+        android:layout_width="140dp"
+        android:layout_height="156dp"
+        android:background="@drawable/mocha"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivLogoMainMenu"
+        app:layout_constraintVertical_bias="0.641" />
+
+    <Button
+        android:id="@+id/btnAmericatoMain"
+        android:layout_width="140dp"
+        android:layout_height="156dp"
+        android:background="@drawable/americano"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivLogoMainMenu"
+        app:layout_constraintVertical_bias="0.94" />
+
+    <Button
+        android:id="@+id/btnCatpuccinoMain"
+        android:layout_width="140dp"
+        android:layout_height="156dp"
+        android:background="@drawable/capuccino"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

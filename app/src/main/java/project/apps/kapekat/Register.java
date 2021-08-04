@@ -66,7 +66,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void updateDrawState(@NonNull TextPaint ds) {
                 super.updateDrawState(ds);
-                ds.setColor(Color.parseColor("#009688"));
+                ds.setColor(Color.parseColor("#A26A4C"));
                 ds.setUnderlineText(false);
             }
         };

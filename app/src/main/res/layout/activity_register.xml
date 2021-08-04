@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.193" />
 
     <EditText
         android:id="@+id/ptRegisterUsername"
@@ -44,7 +44,6 @@
         android:id="@+id/pwRegisterPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="368dp"
         android:drawableStart="@drawable/ic_password"
         android:drawableLeft="@drawable/ic_password"
 
@@ -57,27 +56,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ptRegisterUsername"
-        app:layout_constraintVertical_bias="0.903" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
 
     <EditText
         android:id="@+id/pwRegisterConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
-        android:ems="10"
-        android:hint="Confirm Password"
-
         android:drawableStart="@drawable/ic_password"
         android:drawableLeft="@drawable/ic_password"
+
         android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Confirm Password"
 
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwRegisterPassword" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
 
     <Button
         android:id="@+id/btnRegister"
@@ -98,10 +97,9 @@
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <TextView
         android:id="@+id/tvAlreadyLogin"

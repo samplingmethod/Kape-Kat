@@ -19,4 +19,10 @@ import io.realm.Realm;
 @EActivity(R.layout.activity_review)
 
 public class ReviewActivity extends AppCompatActivity {
+
+    @ViewById
+    EditText ptReviewText;
+
+    @ViewById
+    Button btnSubmit;
 }

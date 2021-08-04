@@ -18,5 +18,5 @@ import io.realm.Realm;
 
 @EActivity(R.layout.activity_review)
 
-public class Review extends AppCompatActivity {
+public class ReviewActivity extends AppCompatActivity {
 }

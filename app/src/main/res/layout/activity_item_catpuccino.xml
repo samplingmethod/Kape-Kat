@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemLilysLatte">
+    tools:context=".ItemCatpuccino">
 
     <ImageView
-        android:id="@+id/ivLogoMainMenu2"
+        android:id="@+id/ivLogoMainMenu3"
         android:layout_width="138dp"
         android:layout_height="143dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,10 +19,10 @@
         app:srcCompat="@drawable/kapekat_without" />
 
     <TextView
-        android:id="@+id/tvLilysLatte"
+        android:id="@+id/tvCatpuccino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lily's Latte"
+        android:text="Catpuccino"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -30,11 +30,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivLogoMainMenu2"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.191" />
 
     <TextView
-        android:id="@+id/tvLilysLattePrice"
+        android:id="@+id/tvCatpuccinoPrice"
         android:layout_width="149dp"
         android:layout_height="37dp"
         android:text="Price: Php 160"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.276" />
 
     <ImageView
-        android:id="@+id/ivItemLilysLatte"
+        android:id="@+id/ivItemCatpuccino"
         android:layout_width="192dp"
         android:layout_height="245dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,25 +58,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.471"
-        app:srcCompat="@drawable/latte" />
+        app:srcCompat="@drawable/capuccino" />
 
     <TextView
-        android:id="@+id/tvLilysLatteDescription"
+        android:id="@+id/tvCatpuccinoDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:lines="2"
-        android:text="Our signature drink combined with a shot of bold \nespresso with fresh, sweet steamed milk over it. "
+        android:text="The drink you won't furr-get! Dark, rich espresso \nlies in wait under a layer of thick milk foam."
         android:textColor="#879971"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.682" />
+        app:layout_constraintVertical_bias="0.692" />
 
     <TextView
-        android:id="@+id/tvLilysLatteQuantity"
+        android:id="@+id/tvCatpuccinoQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quantity:"
@@ -116,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivLogoMainMenu2"
+        app:layout_constraintTop_toTopOf="@+id/ivLogoMainMenu3"
         app:layout_constraintVertical_bias="0.87" />
 
     <Button
@@ -132,7 +131,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivLogoMainMenu2"
+        app:layout_constraintTop_toTopOf="@+id/ivLogoMainMenu3"
         app:layout_constraintVertical_bias="0.955" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,9 +12,9 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
-@EActivity(R.layout.activity_item_lilys_latte)
+@EActivity(R.layout.activity_item_catpuccino)
 
-public class ItemLilysLatte extends AppCompatActivity {
+public class ItemCatpuccino extends AppCompatActivity {
 
     @ViewById(R.id.etQuantityInput)
     TextView etQuantityNum;
@@ -34,6 +34,6 @@ public class ItemLilysLatte extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item_lilys_latte);
+        setContentView(R.layout.activity_item_catpuccino);
     }
 }

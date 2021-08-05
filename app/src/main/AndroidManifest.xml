@@ -10,7 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KapeKat">
         <activity
-            android:name=".ItemLilysLatte"
+            android:name=".ItemAmericato_"
+            android:exported="true" />
+        <activity
+            android:name=".ItemCatpuccino_"
+            android:exported="true" />
+        <activity
+            android:name=".ItemMochatLatte_"
+            android:exported="true" />
+        <activity
+            android:name=".ItemChaiameseTea_"
+            android:exported="true" />
+        <activity
+            android:name=".ItemMeowtcha_"
+            android:exported="true" />
+        <activity
+            android:name=".ItemLilysLatte_"
             android:exported="true" />
         <activity
             android:name=".ReviewActivity_"

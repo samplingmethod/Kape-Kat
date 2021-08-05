@@ -5,10 +5,15 @@
       <map>
         <entry key="app/src/main/res/drawable/shape.xml" value="0.115625" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_item_lilys_latte.xml" value="0.23588027678661677" />
+        <entry key="app/src/main/res/layout/activity_item_americato.xml" value="0.20908208410245024" />
+        <entry key="app/src/main/res/layout/activity_item_catpuccino.xml" value="0.16896749355911234" />
+        <entry key="app/src/main/res/layout/activity_item_chaiamese_tea.xml" value="0.15067969897112982" />
+        <entry key="app/src/main/res/layout/activity_item_lilys_latte.xml" value="0.19043003048904836" />
+        <entry key="app/src/main/res/layout/activity_item_meowtcha.xml" value="0.1861875734956709" />
+        <entry key="app/src/main/res/layout/activity_item_mochat_latte.xml" value="0.1835903852805402" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.23694320151516188" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10260416666666666" />
-        <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.13179347826086957" />
+        <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.25714995424637627" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.11416066342759087" />
         <entry key="app/src/main/res/layout/activity_review.xml" value="0.10156503699547818" />
         <entry key="app/src/main/res/layout/activity_user_management.xml" value="0.165" />

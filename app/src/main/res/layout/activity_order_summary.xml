@@ -7,6 +7,75 @@
     android:background="#F6F6F6"
     tools:context=".OrderSummary">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="304dp"
+        android:layout_height="75dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751">
+
+        <TextView
+            android:id="@+id/tvPreparing2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="70"
+            android:paddingTop="40"
+            android:paddingRight="20"
+            android:paddingBottom="0"
+            android:text="Honda Beat - LD023"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="67dp"
+            android:layout_height="87dp"
+            android:src="@drawable/driver" />
+
+        <TextView
+            android:id="@+id/tvDriver"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="70"
+            android:paddingTop="20"
+            android:paddingRight="10"
+            android:paddingBottom="10"
+            android:text="Clarizza Castillo"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvWhat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold tight, we are purrparing your drink!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341" />
+
+    <TextView
+        android:id="@+id/tvOrderSuccessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Successful!"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288" />
+
     <Button
         android:id="@+id/btnOrderReceived"
         android:layout_width="220dp"
@@ -26,12 +95,122 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="197dp"
-        android:layout_height="187dp"
+        android:layout_width="181dp"
+        android:layout_height="165dp"
         android:src="@drawable/ic_order_summary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/tvOrderSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER SUMMARY:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <TextView
+        android:id="@+id/tvOrderPlaced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1x Catppucino"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHP 160"
+        android:textColor="#879971"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485"
+        tools:layout_editor_absoluteX="232dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-14dp"
+        tools:layout_editor_absoluteY="535dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.978">
+
+        <TextView
+            android:id="@+id/tvOrderPlaced2"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20"
+            android:paddingTop="20"
+            android:paddingRight="10"
+            android:paddingBottom="10"
+            android:text="We found you a driver!"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPreparing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20"
+            android:paddingTop="43"
+            android:paddingRight="20"
+            android:paddingBottom="0"
+            android:text="Driver is heading to your location." />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="200"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/tvOrderPlaced"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderSummary"
+        app:layout_constraintVertical_bias="0.44" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,10 +22,10 @@
             android:id="@+id/tvPreparing2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="70"
-            android:paddingTop="40"
-            android:paddingRight="20"
-            android:paddingBottom="0"
+            android:paddingLeft="70dp"
+            android:paddingTop="40dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="0dp"
             android:text="Honda Beat - LD023"
             android:textSize="12sp" />
 
@@ -39,10 +39,10 @@
             android:id="@+id/tvDriver"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="70"
-            android:paddingTop="20"
-            android:paddingRight="10"
-            android:paddingBottom="10"
+            android:paddingLeft="70dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
             android:text="Clarizza Castillo"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -128,7 +128,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.485" />
@@ -143,7 +143,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.485" />
@@ -155,35 +155,38 @@
         android:text="Price: "
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.683"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.485"
-        tools:layout_editor_absoluteX="232dp" />
+        app:layout_constraintVertical_bias="0.485" />
 
     <androidx.cardview.widget.CardView
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="-14dp"
-        tools:layout_editor_absoluteY="535dp" />
+        tools:layout_editor_absoluteY="535dp"
+        android:layout_width="wrap_content" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="303dp"
         android:layout_height="79dp"
         app:cardElevation="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978">
+        app:layout_constraintVertical_bias="0.615">
 
         <TextView
             android:id="@+id/tvOrderPlaced2"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="20"
-            android:paddingTop="20"
-            android:paddingRight="10"
-            android:paddingBottom="10"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
             android:text="We found you a driver!"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -193,24 +196,24 @@
             android:id="@+id/tvPreparing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20"
-            android:paddingTop="43"
-            android:paddingRight="20"
-            android:paddingBottom="0"
+            android:paddingLeft="20dp"
+            android:paddingTop="43dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="0dp"
             android:text="Driver is heading to your location." />
 
     </androidx.cardview.widget.CardView>
 
     <View
         android:id="@+id/divider"
-        android:layout_width="200"
+        android:layout_width="200dp"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/tvOrderPlaced"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOrderSummary"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

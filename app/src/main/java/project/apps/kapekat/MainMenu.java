@@ -2,7 +2,10 @@ package project.apps.kapekat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,11 +13,16 @@ import android.widget.TextView;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ViewById;
+
+import io.realm.Realm;
 
 @EActivity(R.layout.activity_main_menu)
 
 public class MainMenu extends AppCompatActivity {
+    @Extra
+    String uuid;
 
     @ViewById(R.id.tvWelcomeBack)
     TextView tvWelcomeBack;
@@ -46,10 +54,17 @@ public class MainMenu extends AppCompatActivity {
     @ViewById(R.id.btnCatpuccinoMain)
     Button btnCatpuccino;
 
+    Realm realm;
+    User u;
+
     @AfterViews
     public void init()
     {
-
+        realm = Realm.getDefaultInstance();
+        u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
+        String un = u.getUsername();
+        Log.d("debugz",un);
+        tvWelcomeBack.setText("Welcome back, @"+un+" !");
     }
 
     @Click(R.id.btnRate)
@@ -58,10 +73,11 @@ public class MainMenu extends AppCompatActivity {
         ReviewActivity_.intent(this).start();
     }
 
-    @Click(R.id.btnUserManagement)
-    public void btnUserManagement()
+    public void btnUserManagement(View v)
     {
-        UserManagement_.intent(this).start();
+        Intent intent = new Intent(this, UserManagement_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click(R.id.btnLilyLatteMain)

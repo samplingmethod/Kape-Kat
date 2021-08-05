@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+                                                                                                                                                                                                                                                                                  <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -49,21 +49,24 @@
         android:id="@+id/tvUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#009688"
+        android:text="User"
+        android:textColor="#879971"
         android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintVertical_bias="0.335" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="UPDATE"
+        android:text="Update"
+        android:textAllCaps="false"
+        app:backgroundTint="#879971"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -73,9 +76,12 @@
 
     <Button
         android:id="@+id/btnCancel"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="#879971"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,15 +104,29 @@
         android:id="@+id/tvLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="logout"
         android:text="Log Out here"
-        android:textColor="#009688"
+        android:textColor="#A26A4C"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCancel"
         app:layout_constraintVertical_bias="0.449"
         android:onClick="logout"
         android:clickable="true"/>
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="196dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885"
+        app:srcCompat="@drawable/icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

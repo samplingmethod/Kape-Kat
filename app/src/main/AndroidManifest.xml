@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KapeKat">
         <activity
+            android:name=".ItemLilysLatte"
+            android:exported="true" />
+        <activity
             android:name=".ReviewActivity_"
             android:exported="true" />
         <activity

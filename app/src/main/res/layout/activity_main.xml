@@ -43,14 +43,16 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="390dp"
-        android:layout_height="522dp"
+        android:layout_width="243dp"
+        android:layout_height="274dp"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.363"
         app:srcCompat="@drawable/kapekat_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

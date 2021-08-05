@@ -39,9 +39,9 @@ public class Admin extends AppCompatActivity {
 
         realm = Realm.getDefaultInstance();
 
-        // RealmResults<User> list = realm.where(User.class).findAll();
-        // UserAdapter adapter = new UserAdapter(this, list, true);
-        //  recyclerView.setAdapter(adapter);
+        RealmResults<User> list = realm.where(User.class).findAll();
+        UserAdapter adapter = new UserAdapter(this,list,true);
+        recyclerView.setAdapter(adapter);
     }
     @Click
     public void btnLogOut() {

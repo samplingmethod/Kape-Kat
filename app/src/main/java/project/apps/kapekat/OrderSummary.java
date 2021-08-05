@@ -22,7 +22,7 @@ import org.androidannotations.annotations.Extra;
 
 import java.util.UUID;
 
-@EActivity(R.layout.activity_order_review_management)
+@EActivity(R.layout.activity_order_summary)
 
-public class OrderSummary {
+public class OrderSummary extends AppCompatActivity{
 }

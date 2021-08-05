@@ -24,5 +24,5 @@ import java.util.UUID;
 
 @EActivity(R.layout.activity_order_review_management)
 
-public class OrderReviewDatabase {
+public class OrderReviewDatabase extends AppCompatActivity {
 }

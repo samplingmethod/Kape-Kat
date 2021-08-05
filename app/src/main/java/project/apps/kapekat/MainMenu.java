@@ -63,7 +63,6 @@ public class MainMenu extends AppCompatActivity {
         realm = Realm.getDefaultInstance();
         u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
         String un = u.getUsername();
-        Log.d("debugz",un);
         tvWelcomeBack.setText("Welcome back, @"+un+" !");
     }
 

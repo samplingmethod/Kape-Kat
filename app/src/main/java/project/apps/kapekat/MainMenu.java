@@ -70,7 +70,9 @@ public class MainMenu extends AppCompatActivity {
     @Click(R.id.btnRate)
     public void btnRate()
     {
-        ReviewActivity_.intent(this).start();
+        Intent intent = new Intent(this, ReviewActivity_                                                                                                                                                                                                                                                                                                                                                                        .class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     public void btnUserManagement(View v)
@@ -85,7 +87,4 @@ public class MainMenu extends AppCompatActivity {
     {
         UserManagement_.intent(this).start();
     }
-
-
-
 }

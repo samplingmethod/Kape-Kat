@@ -94,6 +94,10 @@ public class Login extends AppCompatActivity
         String pword = password.getText().toString();
 
         User results = realm.where(User.class).equalTo("username", un).findFirst();
+        if ((un.equals("admin")) && (pword.equals("1234"))){
+            Intent intent = new Intent(this, Admin_.class);
+            startActivity(intent);
+        }
         if (results != null) {
             String check_un = results.getUsername();
             String check_pw = results.getPassword();

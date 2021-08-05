@@ -4,44 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin">
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="150dp"
-        android:layout_height="106dp"
-        android:scaleX="2"
-        android:scaleY="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078"
-        app:srcCompat="@drawable/kapekat_logo" />
+    android:background="#F6F6F6"
+    tools:context=".OrderReviewDatabase">
 
     <TextView
-        android:id="@+id/tvAdminTitle2"
+        android:id="@+id/tvUserReviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome, admin!"
+        android:text="User's Reviews"
         android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.298" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView4"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#879971"
         android:gravity="center"
-        android:text="ORDER SUMMARY"
+        android:text="REVIEWS"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -60,13 +46,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintVertical_bias="0.706" />
 
     <Button
-        android:id="@+id/btnLogOut"
+        android:id="@+id/btnBack"
         android:layout_width="144dp"
         android:layout_height="47dp"
-        android:text="Log Out"
+        android:text="Back"
         android:textColor="#A26A4C"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,4 +62,15 @@
         app:layout_constraintTop_toBottomOf="@+id/recyclerView"
         app:layout_constraintVertical_bias="0.348" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="196dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067"
+        app:srcCompat="@drawable/icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

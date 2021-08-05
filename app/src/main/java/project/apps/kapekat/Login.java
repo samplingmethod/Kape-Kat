@@ -12,6 +12,7 @@ import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -93,6 +94,10 @@ public class Login extends AppCompatActivity
         String pword = password.getText().toString();
 
         User results = realm.where(User.class).equalTo("username", un).findFirst();
+        if ((un.equals("admin")) && (pword.equals("1234"))){
+            Intent intent = new Intent(this, Admin_.class);
+            startActivity(intent);
+        }
         if (results != null) {
             String check_un = results.getUsername();
             String check_pw = results.getPassword();
@@ -111,7 +116,9 @@ public class Login extends AppCompatActivity
                     edit.putString("uuid", check_uuid);
                     edit.apply();
                 }
-                MainMenu_.intent(this).start();
+                Intent intent = new Intent(this, MainMenu_.class);
+                intent.putExtra("uuid", results.getUuid());
+                startActivity(intent);
             }
             else {
                 Toast toast = Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_LONG);

@@ -9,18 +9,18 @@ public class Drink extends RealmObject {
 
     @PrimaryKey
     private String uuid;
+    private int price;
+    private int qty;
     private String drink;
-    private String price;
-    private String img_url;
 
     public Drink() {
     }
 
-    public Drink(String uuid, String drink, String price, String img_url) {
+    public Drink(String uuid, int price, int qty, String drink) {
         this.uuid = uuid;
-        this.drink = drink;
         this.price = price;
-        this.img_url = img_url;
+        this.qty = qty;
+        this.drink = drink;
     }
 
     public String getUuid() {
@@ -31,6 +31,22 @@ public class Drink extends RealmObject {
         this.uuid = uuid;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+
     public String getDrink() {
         return drink;
     }
@@ -39,29 +55,13 @@ public class Drink extends RealmObject {
         this.drink = drink;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getImg_url() {
-        return img_url;
-    }
-
-    public void setImg_url(String img_url) {
-        this.img_url = img_url;
-    }
-
     @Override
     public String toString() {
         return "Drink{" +
                 "uuid='" + uuid + '\'' +
+                ", price=" + price +
+                ", qty=" + qty +
                 ", drink='" + drink + '\'' +
-                ", price='" + price + '\'' +
-                ", img_url='" + img_url + '\'' +
                 '}';
     }
 }

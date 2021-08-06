@@ -36,4 +36,8 @@ public class ItemAmericato extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_americato);
     }
+    @Click
+    public void btnItemCancel(){
+        MainMenu_.intent(this).start();
+    }
 }

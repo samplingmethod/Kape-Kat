@@ -36,4 +36,8 @@ public class ItemChaiameseTea extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_chaiamese_tea);
     }
+    @Click
+    public void btnItemCancel(){
+        MainMenu_.intent(this).start();
+    }
 }

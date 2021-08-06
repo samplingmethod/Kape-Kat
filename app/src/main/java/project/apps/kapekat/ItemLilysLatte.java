@@ -45,4 +45,10 @@ public class ItemLilysLatte extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_lilys_latte);
     }
+
+
+    @Click
+    public void btnItemCancel(){
+        MainMenu_.intent(this).start();
+    }
 }

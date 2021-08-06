@@ -31,7 +31,7 @@ public class OrderReviewDatabase extends AppCompatActivity {
     @ViewById(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    @ViewById
+    @ViewById(R.id.btnBack)
     Button btnBack;
 
     @ViewById
@@ -56,7 +56,8 @@ public class OrderReviewDatabase extends AppCompatActivity {
     }
 
     @Click
-    public void btnBack() {
+    public void btnBack(){
         MainMenu_.intent(this).start();
     }
+
 }

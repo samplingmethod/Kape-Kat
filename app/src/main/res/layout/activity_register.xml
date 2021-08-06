@@ -8,26 +8,9 @@
     tools:context=".Register">
 
     <TextView
-        android:id="@+id/tvLogin_Main"
+        android:id="@+id/tvRegisterTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:clickable="true"
-        android:onClick="login"
-        android:text="Login"
-        android:textColor="#A26A4C"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.699"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCancel"
-        app:layout_constraintVertical_bias="0.369" />
-
-    <TextView
-        android:id="@+id/tvRegisterTitle"
-        android:layout_width="188dp"
-        android:layout_height="67dp"
         android:text="Register"
         android:textColor="#000000"
         android:textSize="48sp"
@@ -65,7 +48,7 @@
         android:drawableStart="@drawable/ic_password"
         android:drawableLeft="@drawable/ic_password"
 
-        android:drawablePadding="12dp"
+        android:drawablePadding="0dp"
         android:ems="10"
         android:hint="Password"
 

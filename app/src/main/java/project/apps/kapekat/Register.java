@@ -127,6 +127,10 @@ public class Register extends AppCompatActivity {
         else{
             Toast toast = Toast.makeText(Register.this, "Confirm password does not match", Toast.LENGTH_LONG);
             toast.show();
-        }
+        }}
+
+    @Click
+    public void btnRegisterCancel(){
+        MainActivity_.intent(this).start();
     }
-}
+    }

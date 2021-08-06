@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,6 +58,8 @@ public class OrderReviewDatabase extends AppCompatActivity {
 
     @Click
     public void btnBack() {
-        MainMenu_.intent(this).start();
+            Intent intent = new Intent(this, MainMenu_.class);
+            intent.putExtra("uuid", uuid);
+            startActivity(intent);
     }
 }

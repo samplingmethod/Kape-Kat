@@ -2,6 +2,7 @@ package project.apps.kapekat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -69,12 +70,18 @@ public class MainMenu extends AppCompatActivity {
     @Click(R.id.btnRate)
     public void btnRate()
     {
-        UserManagement_.intent(this).start();
+        Intent intent = new Intent(this, ReviewActivity_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click(R.id.btnUserManagement)
-    public void btnUserManagement() { UserManagement_.intent(this).start(); }
-
+    public void btnUserManagement()
+    {
+        Intent intent = new Intent(this, UserManagement_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
+    }
     @Click(R.id.btnLilyLatteMain)
     public void latte()
     {

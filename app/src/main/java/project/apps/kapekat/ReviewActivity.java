@@ -33,11 +33,13 @@ public class ReviewActivity extends AppCompatActivity {
     Button btnSubmit;
 
     Realm realm;
+    User u;
 
     @AfterViews
     public void init() {
         Realm.init(getApplicationContext());
         realm = Realm.getDefaultInstance();
+        u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
     }
 
     @Click
@@ -55,7 +57,7 @@ public class ReviewActivity extends AppCompatActivity {
             Toast t = Toast.makeText(this, "New Review saved", Toast.LENGTH_LONG);
             t.show();
 
-            Intent intent = new Intent(this, ReviewActivity_.class);
+            Intent intent = new Intent(this, OrderReviewDatabase_.class);
             intent.putExtra("uuid", uuid);
             startActivity(intent);
         } catch (Exception e) {

@@ -2,6 +2,7 @@ package project.apps.kapekat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Button;
@@ -66,7 +67,9 @@ public class UserManagement extends AppCompatActivity {
                 realm.commitTransaction();
                 Toast t2 = Toast.makeText(this, "Edit Saved", Toast.LENGTH_LONG);
                 t2.show();
-                MainMenu_.intent(this).start();
+                Intent intent = new Intent(this, MainMenu_.class);
+                intent.putExtra("uuid", uuid);
+                startActivity(intent);
             }
             else {
                 Toast t1 = Toast.makeText(this, "Confirm password does not match", Toast.LENGTH_LONG);
@@ -75,6 +78,12 @@ public class UserManagement extends AppCompatActivity {
         }
     @Click
     public void btnCancel(){
-        MainActivity_.intent(this).start();
+        Intent intent = new Intent(this, MainMenu_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
+    }
+    public void logout(){
+        Intent intent = new Intent(this, MainActivity_.class);
+        startActivity(intent);
     }
 }

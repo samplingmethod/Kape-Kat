@@ -73,17 +73,42 @@ public class MainMenu extends AppCompatActivity {
     }
 
     @Click(R.id.btnUserManagement)
-    public void btnUserManagement()
-    {
-        UserManagement_.intent(this).start();
-    }
+    public void btnUserManagement() { UserManagement_.intent(this).start(); }
 
     @Click(R.id.btnLilyLatteMain)
     public void latte()
     {
-        UserManagement_.intent(this).start();
+        ItemLilysLatte_.intent(this).start();
     }
 
+    @Click(R.id.btnMeowtchaMain)
+    public void matcha()
+    {
+        ItemMeowtcha_.intent(this).start();
+    }
 
+    @Click(R.id.btnAmericatoMain)
+    public void americano()
+    {
+        ItemAmericato_.intent(this).start();
+    }
+
+    @Click(R.id.btnChaiMain)
+    public void chaitea()
+    {
+        ItemChaiameseTea_.intent(this).start();
+    }
+
+    @Click(R.id.btnCatpuccinoMain)
+    public void cappuccino()
+    {
+        ItemCatpuccino_.intent(this).start();
+    }
+
+    @Click(R.id.btnMochatMain)
+    public void mocha()
+    {
+        ItemMochatLatte_.intent(this).start();
+    }
 
 }

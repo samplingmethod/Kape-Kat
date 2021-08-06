@@ -3,6 +3,7 @@ package project.apps.kapekat;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -58,17 +59,17 @@ public class MainMenu extends AppCompatActivity {
     @AfterViews
     public void init()
     {
-        u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
-        tvWelcomeBack.setText("Welcome back, "+u.getUsername()+"!");
         Realm.init(getApplicationContext());
         realm = Realm.getDefaultInstance();
-
+        u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
+        Log.d("debugz",u.getUuid());
+        tvWelcomeBack.setText("Welcome back, "+u.getUsername()+"!");
     }
 
     @Click(R.id.btnRate)
     public void btnRate()
     {
-        ReviewActivity_.intent(this).start();
+        UserManagement_.intent(this).start();
     }
 
     @Click(R.id.btnUserManagement)

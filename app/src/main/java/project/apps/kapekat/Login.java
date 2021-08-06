@@ -88,7 +88,6 @@ public class Login extends AppCompatActivity {
 
     @Click(R.id.btnLogin)
     public void login() {
-
         SharedPreferences preferences = getSharedPreferences("data", MODE_PRIVATE);
         String un = username.getText().toString();
         String pword = password.getText().toString();
@@ -102,7 +101,6 @@ public class Login extends AppCompatActivity {
             String check_un = results.getUsername();
             String check_pw = results.getPassword();
             String check_uuid = results.getUuid();
-
             if ((check_un.equals(un)) && (check_pw.equals(pword))) {
                 if (cb.isChecked()) {
                     SharedPreferences.Editor edit = preferences.edit();

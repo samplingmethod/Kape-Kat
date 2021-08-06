@@ -41,6 +41,8 @@
         <activity android:name=".MainMenu_" />
         <activity android:name=".Login_" />
         <activity android:name=".Register_" />
+        <activity android:name=".OrderSummary_" />
+        <activity android:name=".OrderReviewDatabase_" />
         <activity android:name=".MainActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

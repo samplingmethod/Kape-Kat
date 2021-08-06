@@ -53,4 +53,8 @@ public class ItemMochatLatte extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_mochat_latte);
     }
+    @Click
+    public void btnItemCancel(){
+        MainMenu_.intent(this).start();
+    }
 }

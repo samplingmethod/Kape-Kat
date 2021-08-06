@@ -32,7 +32,7 @@ public class OrderReviewDatabase extends AppCompatActivity {
     @ViewById(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    @ViewById
+    @ViewById(R.id.btnBack)
     Button btnBack;
 
     @ViewById
@@ -62,4 +62,5 @@ public class OrderReviewDatabase extends AppCompatActivity {
             intent.putExtra("uuid", uuid);
             startActivity(intent);
     }
+
 }

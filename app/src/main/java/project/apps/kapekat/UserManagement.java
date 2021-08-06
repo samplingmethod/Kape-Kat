@@ -113,7 +113,7 @@ public class UserManagement extends AppCompatActivity {
                 t1.show();
             }
         }
-    @Click(R.id.btnItemCancel)
+    @Click(R.id.btnCancel)
     public void btnCancel(){
         Intent intent = new Intent(this, MainMenu_.class);
         intent.putExtra("uuid", uuid);

@@ -10,11 +10,17 @@ import android.widget.TextView;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ViewById;
+
+import io.realm.Realm;
 
 @EActivity(R.layout.activity_item_lilys_latte)
 
 public class ItemLilysLatte extends AppCompatActivity {
+
+    @Extra
+    String uuid;
 
     @ViewById(R.id.etQuantityInput)
     TextView etQuantityNum;
@@ -25,10 +31,13 @@ public class ItemLilysLatte extends AppCompatActivity {
     @ViewById(R.id.btnItemCancel)
     Button btnCancel;
 
+    Realm realm;
+
     @AfterViews
     public void init()
     {
-
+        Realm.init(getApplicationContext());
+        realm = Realm.getDefaultInstance();
     }
 
     @Override

@@ -31,8 +31,7 @@ import io.realm.RealmQuery;
 import io.realm.RealmResults;
 @EActivity(R.layout.activity_login)
 
-public class Login extends AppCompatActivity
-{
+public class Login extends AppCompatActivity {
 
     @ViewById(R.id.ptUsernameLogin)
     EditText username;
@@ -52,7 +51,7 @@ public class Login extends AppCompatActivity
     Realm realm;
 
     @AfterViews
-    public void init(){
+    public void init() {
         Realm.init(getApplicationContext());
         realm = Realm.getDefaultInstance();
         //Code for Signup (start)
@@ -74,7 +73,7 @@ public class Login extends AppCompatActivity
             }
         };
 
-        ss.setSpan(SignUp, 27, 34,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(SignUp, 27, 34, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         Register.setText(ss);
         Register.setMovementMethod(LinkMovementMethod.getInstance());
 
@@ -86,15 +85,16 @@ public class Login extends AppCompatActivity
 //        String uuid = preferences.getString("uuid", null);
 
     }
+
     @Click(R.id.btnLogin)
-    public void login(){
+    public void login() {
 
         SharedPreferences preferences = getSharedPreferences("data", MODE_PRIVATE);
         String un = username.getText().toString();
         String pword = password.getText().toString();
 
         User results = realm.where(User.class).equalTo("username", un).findFirst();
-        if ((un.equals("admin")) && (pword.equals("1234"))){
+        if ((un.equals("admin")) && (pword.equals("1234"))) {
             Intent intent = new Intent(this, Admin_.class);
             startActivity(intent);
         }
@@ -109,8 +109,7 @@ public class Login extends AppCompatActivity
                     edit.putBoolean("rememberme", true);
                     edit.putString("uuid", check_uuid);
                     edit.apply();
-                }
-                else {
+                } else {
                     SharedPreferences.Editor edit = preferences.edit();
                     edit.putBoolean("rememberme", false);
                     edit.putString("uuid", check_uuid);
@@ -119,82 +118,14 @@ public class Login extends AppCompatActivity
                 Intent intent = new Intent(this, MainMenu_.class);
                 intent.putExtra("uuid", results.getUuid());
                 startActivity(intent);
-            }
-            else {
+            } else {
                 Toast toast = Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_LONG);
                 toast.show();
             }
         }
-        if (results==null) {
+        if (results == null) {
             Toast toast = Toast.makeText(this, "No User Found", Toast.LENGTH_LONG);
             toast.show();
         }
     }
-
-//    @Click(R.id.btnLogin)
-//    public void login(){
-//
-//        SharedPreferences prefs = getSharedPreferences("creds", MODE_PRIVATE);
-//
-//        // Input fields
-//        String Username = username.getText().toString();
-//        String Password = password.getText().toString();
-//
-//        // Preferences fields
-//
-//        String prefsUN = prefs.getString("un", null);
-//        String prefsPW =  prefs.getString("pw", null);
-//
-//        // Source: https://stackoverflow.com/questions/13910156/how-to-check-the-sharedpreferences-string-is-empty-or-null-android/13910268
-//
-//        User info = realm.where(User.class).equalTo("username", Username).findFirst();
-//
-//        if (info == null)
-//        {
-//            Toast toast = Toast.makeText(Login.this, "No user found", Toast.LENGTH_LONG);
-//            toast.show();
-//        }
-//
-//        else if (info != null)
-//        {
-//            String realmUsername = info.getUsername();
-//            String realmPassword = info.getPassword();
-//            String realmUuid = info.getUuid();
-//
-//            if ((realmUsername.equals(Username)) && (realmPassword.equals(Password)))
-//            {
-//                if (cb.isChecked())
-//                {
-//                    SharedPreferences.Editor edit = prefs.edit();
-//                    edit.putBoolean("rm", true);
-//                    edit.putString("uuid", realmUuid);
-//                    edit.apply();
-//                }
-//                else
-//                {
-//                    SharedPreferences.Editor edit = prefs.edit();
-//                    edit.putBoolean("rm", false);
-//                    edit.putString("uuid", realmUuid);
-//                    edit.apply();
-//
-//                }
-//                MainMenu_.intent(this).start();
-//            }
-//            else
-//            {
-//                Toast toast = Toast.makeText(Login.this, "Invalid Credentials", Toast.LENGTH_LONG);
-//                toast.show();
-//            }
-//        }
-//
-//
-//
-//    }
-//
-//    public void onDestroy()
-//    {
-//        super.onDestroy();
-//        realm.close();
-//    }
 }
-

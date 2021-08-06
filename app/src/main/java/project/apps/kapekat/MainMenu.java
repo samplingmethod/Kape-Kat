@@ -10,11 +10,17 @@ import android.widget.TextView;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ViewById;
+
+import io.realm.Realm;
 
 @EActivity(R.layout.activity_main_menu)
 
 public class MainMenu extends AppCompatActivity {
+
+    @Extra
+    String uuid;
 
     @ViewById(R.id.tvWelcomeBack)
     TextView tvWelcomeBack;
@@ -46,9 +52,16 @@ public class MainMenu extends AppCompatActivity {
     @ViewById(R.id.btnCatpuccinoMain)
     Button btnCatpuccino;
 
+    Realm realm;
+    User u;
+
     @AfterViews
     public void init()
     {
+        u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
+        tvWelcomeBack.setText("Welcome back, "+u.getUsername()+"!");
+        Realm.init(getApplicationContext());
+        realm = Realm.getDefaultInstance();
 
     }
 

@@ -63,7 +63,6 @@ public class MainMenu extends AppCompatActivity {
         Realm.init(getApplicationContext());
         realm = Realm.getDefaultInstance();
         u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
-        Log.d("debugz",u.getUuid());
         tvWelcomeBack.setText("Welcome back, "+u.getUsername()+"!");
     }
 
@@ -85,37 +84,49 @@ public class MainMenu extends AppCompatActivity {
     @Click(R.id.btnLilyLatteMain)
     public void latte()
     {
-        ItemLilysLatte_.intent(this).start();
+        Intent intent = new Intent(this, ItemLilysLatte_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click(R.id.btnMeowtchaMain)
     public void matcha()
     {
-        ItemMeowtcha_.intent(this).start();
+        Intent intent = new Intent(this, ItemMeowtcha_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click(R.id.btnAmericatoMain)
     public void americano()
     {
-        ItemAmericato_.intent(this).start();
+        Intent intent = new Intent(this, ItemAmericato_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click(R.id.btnChaiMain)
     public void chaitea()
     {
-        ItemChaiameseTea_.intent(this).start();
+        Intent intent = new Intent(this, ItemChaiameseTea_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click(R.id.btnCatpuccinoMain)
     public void cappuccino()
     {
-        ItemCatpuccino_.intent(this).start();
+        Intent intent = new Intent(this, ItemCatpuccino_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click(R.id.btnMochatMain)
     public void mocha()
     {
-        ItemMochatLatte_.intent(this).start();
+        Intent intent = new Intent(this, ItemMochatLatte_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
 }

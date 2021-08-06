@@ -2,6 +2,7 @@ package project.apps.kapekat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -32,17 +33,23 @@ public class ItemLilysLatte extends AppCompatActivity {
     Button btnCancel;
 
     Realm realm;
-
+    User u;
     @AfterViews
     public void init()
     {
         Realm.init(getApplicationContext());
         realm = Realm.getDefaultInstance();
+        u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_lilys_latte);
+    }
+    @Click(R.id.btnItemCancel)
+    public void btnCancel(){
+        Intent intent = new Intent(this, MainMenu_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 }

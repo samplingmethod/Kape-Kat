@@ -1,10 +1,18 @@
 package project.apps.kapekat;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -43,7 +51,11 @@ public class UserManagement extends AppCompatActivity {
     TextView tvUserName;
 
     @ViewById
+    TextView tvLogOut;
+
+    @ViewById
     Button btnCancel;
+
 
     Realm realm;
     User u;
@@ -54,6 +66,31 @@ public class UserManagement extends AppCompatActivity {
         realm = Realm.getDefaultInstance();
         u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
         tvUserName.setText(u.getUsername());
+
+        //Code for Signup (start)
+        String text = "Logout here";
+        SpannableString ss = new SpannableString(text);
+        ClickableSpan SignUp = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                Intent intent = new Intent(UserManagement.this, MainActivity_.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void updateDrawState(@NonNull TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(Color.parseColor("#A26A4C"));
+                ds.setUnderlineText(false);
+
+            }
+        };
+
+        ss.setSpan(SignUp, 0, 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tvLogOut.setText(ss);
+        tvLogOut.setMovementMethod(LinkMovementMethod.getInstance());
+
+        //Code for Signup (end)
     }
     @Click(R.id.btnUpdate)
     public void btnUpdate() {
@@ -82,8 +119,5 @@ public class UserManagement extends AppCompatActivity {
         intent.putExtra("uuid", uuid);
         startActivity(intent);
     }
-    public void logout(){
-        Intent intent = new Intent(this, MainActivity_.class);
-        startActivity(intent);
-    }
+
 }

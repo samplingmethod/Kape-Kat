@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".MainActivity">
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="669dp"
+        android:layout_height="890dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
 
     <Button
         android:id="@+id/btnLoginLanding"
@@ -43,16 +56,15 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="243dp"
-        android:layout_height="274dp"
+        android:layout_width="113dp"
+        android:layout_height="144dp"
         android:scaleX="2"
         android:scaleY="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363"
+        app:layout_constraintVertical_bias="0.095"
         app:srcCompat="@drawable/kapekat_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,8 +42,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintTop_toBottomOf="@+id/ptUserPassword"
+        app:layout_constraintVertical_bias="0.048" />
 
     <TextView
         android:id="@+id/tvUserName"
@@ -66,6 +66,7 @@
         android:layout_height="wrap_content"
         android:text="Update"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         app:backgroundTint="#879971"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,15 +107,15 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:onClick="logout"
-        android:text="Log Out here"
+        android:text="Logout here"
         android:textColor="#A26A4C"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCancel"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintVertical_bias="0.369" />
 
     <ImageView
         android:id="@+id/imageView4"

@@ -48,7 +48,7 @@
         android:drawableStart="@drawable/ic_password"
         android:drawableLeft="@drawable/ic_password"
 
-        android:drawablePadding="0dp"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
 
@@ -67,7 +67,7 @@
         android:drawableStart="@drawable/ic_password"
         android:drawableLeft="@drawable/ic_password"
 
-        android:drawablePadding="12dp"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Confirm Password"
 

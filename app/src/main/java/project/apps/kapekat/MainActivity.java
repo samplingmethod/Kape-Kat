@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.VideoView;
 
 import org.androidannotations.annotations.AfterViews;

@@ -3,10 +3,8 @@ package project.apps.kapekat;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
@@ -32,6 +30,9 @@ public class ReviewActivity extends AppCompatActivity {
     @ViewById
     Button btnSubmit;
 
+    @ViewById(R.id.btnPreviousReview)
+    Button btnPreviousRev;
+
     Realm realm;
     User u;
 
@@ -40,6 +41,14 @@ public class ReviewActivity extends AppCompatActivity {
         Realm.init(getApplicationContext());
         realm = Realm.getDefaultInstance();
         u = realm.where(User.class).equalTo("uuid", uuid).findFirst();
+    }
+
+    @Click(R.id.btnPreviousReview)
+    public void previousRev()
+    {
+        Intent intent = new Intent(this, OrderReviewDatabase_.class);
+        intent.putExtra("uuid", uuid);
+        startActivity(intent);
     }
 
     @Click

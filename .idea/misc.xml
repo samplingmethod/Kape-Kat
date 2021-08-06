@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/shape.xml" value="0.115625" />
-        <entry key="app/src/main/res/layout/activity_admin.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_admin.xml" value="0.23961724612403457" />
         <entry key="app/src/main/res/layout/activity_item_americato.xml" value="0.11820652173913043" />
         <entry key="app/src/main/res/layout/activity_item_catpuccino.xml" value="0.11820652173913043" />
         <entry key="app/src/main/res/layout/activity_item_chaiamese_tea.xml" value="0.11820652173913043" />
@@ -19,7 +19,7 @@
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.34638060045114266" />
         <entry key="app/src/main/res/layout/activity_review.xml" value="0.27983958746932414" />
         <entry key="app/src/main/res/layout/activity_user_management.xml" value="0.23303227510719116" />
-        <entry key="app/src/main/res/layout/row_layout.xml" value="0.10104166666666667" />
+        <entry key="app/src/main/res/layout/row_layout.xml" value="0.5588892445290132" />
         <entry key="app/src/main/res/layout/row_layout2.xml" value="0.25" />
       </map>
     </option>
